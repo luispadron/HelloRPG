@@ -5,8 +5,28 @@
 
 [node name="World" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 31.7413, 43.0775 )
+[node name="YSort" type="YSort" parent="."]
 
-[node name="Bush" parent="." instance=ExtResource( 2 )]
-position = Vector2( 70.6622, 40.8102 )
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 81.1554, 57.4047 )
+
+[node name="Bush" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 58.6742, 13.6178 )
+
+[node name="Bush2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 100.002, 13.0739 )
+
+[node name="Bush3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 19.0097, 13.6587 )
+
+[node name="Bush4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 20.7641, 53.1315 )
+
+[node name="Bush5" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 23.3956, 95.5282 )
+
+[node name="Bush6" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 52.3423, 128.276 )
+
+[node name="Bush7" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 24.2728, 160.147 )
