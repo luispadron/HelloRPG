@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-const ACCELERATION = 10
-const FRICTION = 8
-const MAX_SPEED = 100 
+const ACCELERATION = 610
+const FRICTION = 631
+const MAX_SPEED = 90 
 
 # -- The current velocity vector for the 'Player'.
 var velocity = Vector2.ZERO
@@ -18,10 +18,9 @@ func _physics_process(delta):
 	
 	if input_v == Vector2.ZERO:
 		# Slow down player
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	else:
 		# Accelerate
-		velocity = velocity.move_toward(input_v * MAX_SPEED, ACCELERATION)
+		velocity = velocity.move_toward(input_v * MAX_SPEED, ACCELERATION * delta)
 
-
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
